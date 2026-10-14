@@ -6,7 +6,7 @@ const pool = config.databaseUrl || process.env.PGHOST
       ...(config.databaseUrl ? { connectionString: config.databaseUrl } : {}),
       max: config.databasePoolSize,
       idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 5000,
+      connectionTimeoutMillis: 30000,
     })
   : null;
 
